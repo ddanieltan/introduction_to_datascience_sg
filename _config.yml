@@ -1,6 +1,6 @@
 # Book settings
-title: My sample book
-author: The Jupyter Book Community
+title: Introduction to Data Science SG
+author: Daniel
 logo: logo.png
 
 latex:
