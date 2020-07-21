@@ -31,7 +31,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. About the author" href="about_the_author.html" />
+    <link rel="next" title="1. Introduction" href="../2_introduction/introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -71,25 +71,27 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Get Started
+ </span>
+</p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="about_the_author.html">
-   1. About the author
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="how_to_use_this_book.html">
-   2. How to use
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../2_introduction/introduction.html">
-   3. Introduction
+   1. Introduction
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python Basics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../3_python_basics/python_basics.html">
-   4. Python Basics
+   1. Python Basics
   </a>
  </li>
 </ul>
@@ -161,7 +163,33 @@
             <i class="fas fa-list"></i> On this page
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#about-the-author">
+   About the author
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-code-along">
+   How to code along
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#option-a-clone-the-git-repository">
+     Option A: Clone the git repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#option-b-binder-link">
+     Option B: Binder link
+    </a>
+    <ul class="nav section-nav flex-column">
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -172,7 +200,40 @@
                 
   <div class="section" id="about-this-book">
 <h1>About this book<a class="headerlink" href="#about-this-book" title="Permalink to this headline">¶</a></h1>
+<p>This book is written to</p>
+<div class="section" id="about-the-author">
+<h2>About the author<a class="headerlink" href="#about-the-author" title="Permalink to this headline">¶</a></h2>
+<p>:wave: Hello, my name is Daniel.</p>
+</div>
+<div class="section" id="how-to-code-along">
+<h2>How to code along<a class="headerlink" href="#how-to-code-along" title="Permalink to this headline">¶</a></h2>
+<p>The best way to learn the following lessons will be to code alongside the examples and have a go at completing the exercises.</p>
+<p>There are 2 options to access the code.</p>
+<div class="section" id="option-a-clone-the-git-repository">
+<h3>Option A: Clone the git repository<a class="headerlink" href="#option-a-clone-the-git-repository" title="Permalink to this headline">¶</a></h3>
+<p>If you have some coding experience, this is the recommended option. You will need to have Python 3 installed on your system. From the terminal, run the following commands.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone http://ddanieltan.github.io/introduction_to_datascience_sg/
+
+conda create -n myenv
+conda activate myenv
+conda install --file requirements.txt
+</pre></div>
+</div>
+<p>This will clone this project’s code into a local folder and install the project’s dependencies.
+Following which, you can interact the code by starting a local jupyter notebook or jupyterlab instance.</p>
+</div>
+<div class="section" id="option-b-binder-link">
+<h3>Option B: Binder link<a class="headerlink" href="#option-b-binder-link" title="Permalink to this headline">¶</a></h3>
+<p>On every notebook, you’ll notice a binder link like so.
+<a class="reference external" href="https://mybinder.org/v2/gh/ddanieltan/introduction_to_datascience_sg/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>Clicking on the link will open a new tab in your browser that after a short startup time, give you access to a cloud-hosted instance of jupyterlab.
+From there, you can access and run the code directly from your browser.
+This is nice, fuss-free way of running the code without installing additional software in your computer (suitable for large workshops), but the drawback is that you won’t be able to save a local copy of the code.</p>
 <div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
 </div>
 </div>
 
@@ -185,7 +246,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="about_the_author.html" title="next page"><span class="section-number">1. </span>About the author</a>
+    <a class='right-next' id="next-link" href="../2_introduction/introduction.html" title="next page"><span class="section-number">1. </span>Introduction</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
