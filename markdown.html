@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>1.1. Markdown Files &#8212; Introduction to Data Science SG</title>
+    <title>1.2. Markdown Files &#8212; Introduction to Data Science SG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -31,8 +31,8 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1.2. Content with notebooks" href="notebooks.html" />
-    <link rel="prev" title="1. Introduction" href="chapters/2_introduction/introduction.html" />
+    <link rel="next" title="1.3. Content with notebooks" href="notebooks.html" />
+    <link rel="prev" title="1.1. Jupyter notebooks" href="chapters/2_introduction/jupyter_notebooks.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -72,39 +72,32 @@
   </a>
  </li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Get Started
- </span>
-</p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="reference internal" href="chapters/2_introduction/introduction.html">
    1. Introduction
   </a>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapters/2_introduction/jupyter_notebooks.html">
+     1.1. Jupyter notebooks
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.1. Markdown Files
+     1.2. Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="notebooks.html">
-     1.2. Content with notebooks
+     1.3. Content with notebooks
     </a>
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Python Basics
- </span>
-</p>
-<ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="chapters/3_python_basics/python_basics.html">
-   1. Python Basics
+   2. Python Basics
   </a>
  </li>
 </ul>
@@ -179,27 +172,27 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-myst">
-   1.1.1. What is MyST?
+   1.2.1. What is MyST?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-are-roles-and-directives">
-   1.1.2. What are roles and directives?
+   1.2.2. What are roles and directives?
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-a-directive">
-     1.1.2.1. Using a directive
+     1.2.2.1. Using a directive
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#using-a-role">
-     1.1.2.2. Using a role
+     1.2.2.2. Using a role
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#executing-code-in-your-markdown-files">
-     1.1.2.3. Executing code in your markdown files
+     1.2.2.3. Executing code in your markdown files
     </a>
    </li>
   </ul>
@@ -215,19 +208,19 @@
               <div>
                 
   <div class="section" id="markdown-files">
-<h1><span class="section-number">1.1. </span>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.2. </span>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this headline">¶</a></h1>
 <p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
 in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
 called <strong>MyST Markdown</strong>.</p>
 <div class="section" id="what-is-myst">
-<h2><span class="section-number">1.1.1. </span>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.1. </span>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">¶</a></h2>
 <p>MyST stands for “Markedly Structured Text”. It
 is a slight variation on a flavor of markdown called “CommonMark” markdown,
 with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
 in the Sphinx ecosystem.</p>
 </div>
 <div class="section" id="what-are-roles-and-directives">
-<h2><span class="section-number">1.1.2. </span>What are roles and directives?<a class="headerlink" href="#what-are-roles-and-directives" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2.2. </span>What are roles and directives?<a class="headerlink" href="#what-are-roles-and-directives" title="Permalink to this headline">¶</a></h2>
 <p>Roles and directives are two of the most powerful tools in Jupyter Book. They
 are kind of like functions, but written in a markup language. They both
 serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
@@ -235,7 +228,7 @@ serve a similar purpose, but <strong>roles are written in one line</strong>, whe
 and what they do with those inputs depends on the specific role or directive
 that is being called.</p>
 <div class="section" id="using-a-directive">
-<h3><span class="section-number">1.1.2.1. </span>Using a directive<a class="headerlink" href="#using-a-directive" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.2.1. </span>Using a directive<a class="headerlink" href="#using-a-directive" title="Permalink to this headline">¶</a></h3>
 <p>At its simplest, you can insert a directive into your book’s content like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
 My directive content
@@ -261,7 +254,7 @@ Here is a note
 <a class="reference external" href="https://myst-parser.readthedocs.io/">MyST documentation</a>.</p>
 </div>
 <div class="section" id="using-a-role">
-<h3><span class="section-number">1.1.2.2. </span>Using a role<a class="headerlink" href="#using-a-role" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.2.2. </span>Using a role<a class="headerlink" href="#using-a-role" title="Permalink to this headline">¶</a></h3>
 <p>Roles are very similar to directives, but they are less-complex and written
 entirely on one line. You can insert a role into your book’s content with
 this pattern:</p>
@@ -276,7 +269,7 @@ role syntax <code class="docutils literal notranslate"><span class="pre">{doc}`i
 <a class="reference external" href="https://myst-parser.readthedocs.io/">MyST documentation</a>.</p>
 </div>
 <div class="section" id="executing-code-in-your-markdown-files">
-<h3><span class="section-number">1.1.2.3. </span>Executing code in your markdown files<a class="headerlink" href="#executing-code-in-your-markdown-files" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">1.2.2.3. </span>Executing code in your markdown files<a class="headerlink" href="#executing-code-in-your-markdown-files" title="Permalink to this headline">¶</a></h3>
 <p>If you’d like to include computational content inside these markdown files,
 you can use MyST Markdown to define cells that will be executed when your
 book is built. Jupyter Book uses <em>jupytext</em> to do this.</p>
@@ -310,8 +303,8 @@ see <a class="reference external" href="https://myst-nb.readthedocs.io/">The MyS
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="chapters/2_introduction/introduction.html" title="previous page"><span class="section-number">1. </span>Introduction</a>
-    <a class='right-next' id="next-link" href="notebooks.html" title="next page"><span class="section-number">1.2. </span>Content with notebooks</a>
+    <a class='left-prev' id="prev-link" href="chapters/2_introduction/jupyter_notebooks.html" title="previous page"><span class="section-number">1.1. </span>Jupyter notebooks</a>
+    <a class='right-next' id="next-link" href="notebooks.html" title="next page"><span class="section-number">1.3. </span>Content with notebooks</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
