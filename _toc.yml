@@ -1,17 +1,15 @@
 - file: chapters/1_about/about_this_book
-  #expand_sections: true
   numbered: true
-  sections:
-  - file: chapters/1_about/about_the_author
-  - file: chapters/1_about/how_to_use_this_book
+
+- header: Get Started
 - file: chapters/2_introduction/introduction
-  numbered: true
   sections:
     - file: markdown
     - file: notebooks
+
+- header: Python Basics
 - file: chapters/3_python_basics/python_basics
-  numbered: true
   sections:
    - file: chapters/3_python_basics/variables
    - file: chapters/3_python_basics/control_flow
-#    - file: control_flow
+

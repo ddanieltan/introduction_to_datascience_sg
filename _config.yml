@@ -3,6 +3,8 @@ title: Introduction to Data Science SG
 author: Daniel
 logo: logo.png
 
-latex:
-  latex_documents:
-    targetname: book.tex
+repository: 
+    url: https://github.com/ddanieltan/introduction_to_datascience_sg
+# launch_buttons:
+#     binderhub_url: "https://mybinder.org/v2/gh/ddanieltan/introduction_to_datascience_sg/master?urlpath=lab"
+
