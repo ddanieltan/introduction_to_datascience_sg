@@ -1,9 +1,5 @@
 # About this book
-
-This book is written to
-
-## About the author
-:wave: Hello, my name is Daniel.
+Hello, my name is Daniel and I'm a Data Scientist based in Singapore. 
 
 ## How to code along
 The best way to learn the following lessons will be to code alongside the examples and have a go at completing the exercises.
@@ -28,4 +24,4 @@ On every notebook, you'll notice a binder link like so.
 
 Clicking on the link will open a new tab in your browser that after a short startup time, give you access to a cloud-hosted instance of jupyterlab.
 From there, you can access and run the code directly from your browser.
-This is nice, fuss-free way of running the code without installing additional software in your computer (suitable for large workshops), but the drawback is that you won't be able to save a local copy of the code.
+This is nice, fuss-free way of running the code without installing additional software in your computer making this option a useful way of conducting a workshop for a larger group of students. But the drawback is that you won't be able to save a local copy of the code.

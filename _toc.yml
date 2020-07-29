@@ -1,5 +1,5 @@
 - file: chapters/0_about/about_this_book
-  numbered: true
+  #numbered: true
 
 - file: chapters/1_introduction/introduction
   sections:
