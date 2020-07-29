@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>2.1. Variables &#8212; Introduction to Data Science SG</title>
+    <title>Variables &#8212; Introduction to Data Science SG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
@@ -29,10 +30,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.2. Control Flow" href="control_flow.html" />
-    <link rel="prev" title="2. Python Basics" href="python_basics.html" />
+    <link rel="next" title="Control Flow" href="control_flow.html" />
+    <link rel="prev" title="Python Basics" href="python_basics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -65,32 +74,25 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../0_about/about_this_book.html">
-   About this book
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+  <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_introduction/introduction.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="python_basics.html">
-   2. Python Basics
+   Python Basics
   </a>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.1. Variables
+     Variables
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="control_flow.html">
-     2.2. Control Flow
+     Control Flow
     </a>
    </li>
   </ul>
@@ -100,10 +102,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -166,18 +164,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   2.1.1. Markdown + notebooks
+  <a class="reference internal nav-link" href="#assignment">
+   Assignment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   2.1.2. MyST markdown
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   2.1.3. Code blocks and outputs
+  <a class="reference internal nav-link" href="#reserved-keywords">
+   Reserved Keywords
   </a>
  </li>
 </ul>
@@ -192,38 +185,88 @@
                 
   <p><a class="reference external" href="https://mybinder.org/v2/gh/ddanieltan/introduction_to_datascience_sg/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <div class="section" id="variables">
-<h1><span class="section-number">2.1. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
-<p>You can also create content with Jupyter Notebooks. This means that you can include
-code blocks and their outputs in your book.</p>
-<div class="section" id="markdown-notebooks">
-<h2><span class="section-number">2.1.1. </span>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">¶</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo.png" /></p>
-<p>You an also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[
-math^{blocks}
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mbox{mean} la_{tex} \\ \\
-math blocks
-\end{aligned}
-\end{split}\]</div>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
+<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="assignment">
+<h2>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h2>
+<p>Variables are symbolic names that store pieces of information.</p>
+<p>Using ‘=’, we assign values to variables</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s assign the value 9 to the variable x</span>
+<span class="n">x</span><span class="o">=</span><span class="mi">9</span>
+</pre></div>
 </div>
-<div class="section" id="myst-markdown">
-<h2><span class="section-number">2.1.2. </span>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">¶</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
 </div>
-<div class="section" id="code-blocks-and-outputs">
-<h2><span class="section-number">2.1.3. </span>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
+</div>
+<p>Now anytime we call out this variable, we can retrieve our stored value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Following which, we can now express more complex ideas with our variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>10
+18
+3.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reserved-keywords">
+<h2>Reserved Keywords<a class="headerlink" href="#reserved-keywords" title="Permalink to this headline">¶</a></h2>
+<p>You may have noticed that while Python allows for a large variety of variable names…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">merlion</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">the_padang_is_green</span><span class="o">=</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>… some variable names cannot be used.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable Names that do not work</span>
+<span class="mi">22</span><span class="n">_jump_street</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># variable names that start with numbers</span>
+<span class="nb">print</span> <span class="o">=</span> <span class="mi">11</span>            <span class="c1"># variable names that match reserved key words</span>
+<span class="n">quick</span> <span class="n">brown</span> <span class="n">fox</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># variable names containing non-alpha numeric characters or underscores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-5-1772b0cf3f92&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<span class="g g-Whitespace">    </span><span class="mi">22</span><span class="n">_jump_street</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># variable names that start with numbers</span>
+      <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid token
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Variable names are also case sensitive. Meaning that <code class="docutils literal notranslate"><span class="pre">kiasu</span></code>, <code class="docutils literal notranslate"><span class="pre">KIASU</span></code> and <code class="docutils literal notranslate"><span class="pre">kiaSU</span></code> would be treated as 3 separate variables</p>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
@@ -258,7 +301,7 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/variables_3_0.png" src="../../_images/variables_3_0.png" />
+<img alt="../../_images/variables_14_0.png" src="../../_images/variables_14_0.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
@@ -266,6 +309,25 @@ with your book. For more information about this, see <a class="reference externa
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/2_python_basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -275,8 +337,8 @@ with your book. For more information about this, see <a class="reference externa
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python_basics.html" title="previous page"><span class="section-number">2. </span>Python Basics</a>
-    <a class='right-next' id="next-link" href="control_flow.html" title="next page"><span class="section-number">2.2. </span>Control Flow</a>
+    <a class='left-prev' id="prev-link" href="python_basics.html" title="previous page">Python Basics</a>
+    <a class='right-next' id="next-link" href="control_flow.html" title="next page">Control Flow</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

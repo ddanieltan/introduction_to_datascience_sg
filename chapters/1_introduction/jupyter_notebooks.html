@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>1.1. Jupyter Notebooks &#8212; Introduction to Data Science SG</title>
+    <title>Jupyter Notebooks &#8212; Introduction to Data Science SG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/sphinx-book-theme.js"></script>
@@ -29,10 +30,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.2. Markdown Files" href="../../markdown.html" />
-    <link rel="prev" title="1. Introduction" href="introduction.html" />
+    <link rel="next" title="Markdown Files" href="../../markdown.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -65,39 +74,32 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../0_about/about_this_book.html">
-   About this book
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+  <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="reference internal" href="introduction.html">
-   1. Introduction
+   Introduction
   </a>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.1. Jupyter Notebooks
+     Jupyter Notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../markdown.html">
-     1.2. Markdown Files
+     Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../notebooks.html">
-     1.3. Content with notebooks
+     Content with notebooks
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../2_python_basics/python_basics.html">
-   2. Python Basics
+   Python Basics
   </a>
  </li>
 </ul>
@@ -105,10 +107,6 @@
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -169,7 +167,31 @@
             <i class="fas fa-list"></i> On this page
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-cells">
+   Code Cells
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comments">
+   Comments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -179,11 +201,127 @@
               <div>
                 
   <div class="section" id="jupyter-notebooks">
-<h1><span class="section-number">1.1. </span>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>Jupyter notebooks are documents where we</p>
+<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>Jupyter notebooks are interactive environments where you can write and run Python code.</p>
 <p>&lt; Add screenshot of Jupyter notebook&gt;</p>
+<div class="section" id="code-cells">
+<h2>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a code cell</span>
+<span class="c1"># Select this code cell by clicking on it</span>
+<span class="c1"># Run this code cell by either clicking the &#39;Run button&#39; above</span>
+<span class="c1"># or using the shortcut &#39;Shift-Enter&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Welcome!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Welcome!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Every time we run a code block, Python will execute any code written, and if there’s an output, it will print it after each code block.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If there are more than 1 line of python code within a code cell</span>
+<span class="c1"># Running the code cell, will output the latest line of code</span>
+
+<span class="mi">1</span><span class="o">+</span><span class="mi">3</span> 
+<span class="mi">2</span><span class="o">+</span><span class="mi">4</span>
+<span class="mi">3</span><span class="o">+</span><span class="mi">5</span> <span class="c1"># This output will show</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># You might have noticed that some text in our code block </span>
+<span class="c1"># are shaded greenish-gray and are preceded by a # symbol</span>
+<span class="c1"># When you run this code block, you should see nothing happening.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These shaded words are <strong>comments</strong>.</p>
+<p>Comments are instructions ignored by our Python interpreter.
+Just like a real life notebook, you are encouraged to write down personal learning notes in comments as we go along.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you forgot to add &#39;#&#39;</span>
+<span class="c1"># Python assumes you giving it coding instructions</span>
+<span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">running</span> <span class="n">this</span> <span class="n">code</span> <span class="n">block</span> <span class="n">should</span> <span class="n">throw</span> <span class="n">an</span> <span class="n">error</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-4-13824d4f2c20&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">running</span> <span class="n">this</span> <span class="n">code</span> <span class="n">block</span> <span class="n">should</span> <span class="n">throw</span> <span class="n">an</span> <span class="n">error</span><span class="o">.</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>Speaking of errors, as we continue to practice our programming, we’ll be meeting a lot of these.
+Remember, these errors are a very common experience for any programmer so don’t fret!</p>
+<p>Errors give us instant feedback on our code.
+Often (but not always), Python is even smart enough to identify which portion of our code is causing the error.</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;What is wrong with this code?&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-5-3e181984ee25&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nb">print</span> <span class="s1">&#39;What is wrong with this code?&#39;</span>
+                                        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: Missing parentheses in call to &#39;print&#39;. Did you mean print(&#39;What is wrong with this code?&#39;)?
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html">Official Jupyterlab Documentation</a></p></li>
+</ul>
+</div>
+</div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters/1_introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -193,8 +331,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page"><span class="section-number">1. </span>Introduction</a>
-    <a class='right-next' id="next-link" href="../../markdown.html" title="next page"><span class="section-number">1.2. </span>Markdown Files</a>
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="../../markdown.html" title="next page">Markdown Files</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
