@@ -35,7 +35,7 @@ If you've installed the Anaconda distribution, you will have all the neccesary l
 ```
 pip install -r requirements.txt
 ```
-Finally, you can start a `jupyter lab` or `jupyter notebook` to begin using this book.
+Finally, you can start a `jupyter lab` or `jupyter notebook` session to begin using this book.
 
 ## License
 The contents of this book are licensed for free consumption under the following license:  
