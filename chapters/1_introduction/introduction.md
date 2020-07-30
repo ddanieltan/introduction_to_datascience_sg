@@ -1,11 +1,12 @@
 # Introduction
 
-In this section, we introduce Data Science, Python and the Jupyter Project.
+**What is Data Science?**
+Data Science is a wide variety of techniques and practices modern companies use today to draw insights and predictions from raw data. 
 
-## Data Science
-Data Science is a wide variety of techniques and practices modern companies use today to draw insights and predictions from raw data. A focus of this book will be on Machine Learning techniques, which are the most common applications of data science in modern businesses.
+**What is Machine Learning?**
+A focus of this book will be on Machine Learning techniques, which are the most common applications of data science in modern businesses. Traditional 
 
-## Python
+**Python Programming Language**
 In this online textbook, we will be primarily using the Python progamming language.
 Python is argubly the [world's most popular programming language](http://pypl.github.io/PYPL.html) and the language most universities use today to teach programming to new students.
 Importantly, Python has a growing community of Data Science users, who have created many of the Python libraries that we will use in this book.

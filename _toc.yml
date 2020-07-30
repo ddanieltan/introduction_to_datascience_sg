@@ -1,16 +1,17 @@
 - file: chapters/0_about/about_this_book
-  #numbered: true
-
+  numbered: True
 - file: chapters/1_introduction/introduction
   sections:
     - file: chapters/1_introduction/jupyter_notebooks
-    - file: markdown
-    - file: notebooks
 
 - file: chapters/2_python_basics/python_basics
   sections:
    - file: chapters/2_python_basics/variables
+   - file: chapters/2_python_basics/int_and_float
+   - file: chapters/2_python_basics/string
+   - file: chapters/2_python_basics/boolean_and_none
    - file: chapters/2_python_basics/control_flow
+   - file: chapters/2_python_basics/lists
    - file: chapters/2_python_basics/exercises
    - file: chapters/2_python_basics/solutions
 
@@ -20,4 +21,3 @@
    - file: chapters/3_numpy_pandas/pandas
    - file: chapters/3_numpy_pandas/exercises
    - file: chapters/3_numpy_pandas/solutions
-
