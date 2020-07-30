@@ -37,14 +37,24 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/0_about/about_this_book.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Introduction" href="../1_introduction/introduction.html" />
+    <link rel="next" title="1. Introduction" href="../1_introduction/introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/0_about/about_this_book.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="About this book" />
+<meta property="og:description" content="About this book  Introduction to Data Science SG is a free, online textbook that covers introductory topics under Data Science and Machine Learning. What makes " />
+<meta property="og:image"       content="https://github.com/ddanieltan/introduction_to_datascience_sg/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
 
 
   </head>
@@ -75,13 +85,25 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
+  <a class="reference internal" href="#">
+   About this book
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
   <a class="reference internal" href="../1_introduction/introduction.html">
-   Introduction
+   1. Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../2_python_basics/python_basics.html">
-   Python Basics
+   2. Python Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_numpy_pandas/numpy_and_pandas.html">
+   3. Numpy and Pandas
   </a>
  </li>
 </ul>
@@ -133,6 +155,24 @@
 </div>
         <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ddanieltan/introduction_to_datascience_sg"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ddanieltan/introduction_to_datascience_sg/issues/new?title=Issue%20on%20page%20%2Fchapters/0_about/about_this_book.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ddanieltan/introduction_to_datascience_sg/edit/master/chapters/0_about/about_this_book.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -151,21 +191,31 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-code-along">
-   How to code along
+  <a class="reference internal nav-link" href="#about-me">
+   About me
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-use-this-book">
+   How use this book
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#option-a-clone-the-git-repository">
-     Option A: Clone the git repository
+    <a class="reference internal nav-link" href="#option-a-binder-link">
+     Option A: Binder link
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#option-b-binder-link">
-     Option B: Binder link
+    <a class="reference internal nav-link" href="#option-b-local-coding-environment">
+     Option B: Local coding environment
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
  </li>
 </ul>
 
@@ -179,33 +229,45 @@
                 
   <div class="section" id="about-this-book">
 <h1>About this book<a class="headerlink" href="#about-this-book" title="Permalink to this headline">¶</a></h1>
+<p><strong>Introduction to Data Science SG</strong> is a free, online textbook that covers introductory topics under Data Science and Machine Learning. What makes this book unique is our usage of uniquely Singaporean datasets.</p>
+<p>In this book, you’ll learn:</p>
+<div class="section" id="about-me">
+<h2>About me<a class="headerlink" href="#about-me" title="Permalink to this headline">¶</a></h2>
 <p>Hello, my name is Daniel and I’m a Data Scientist based in Singapore.</p>
-<div class="section" id="how-to-code-along">
-<h2>How to code along<a class="headerlink" href="#how-to-code-along" title="Permalink to this headline">¶</a></h2>
-<p>The best way to learn the following lessons will be to code alongside the examples and have a go at completing the exercises.</p>
+</div>
+<div class="section" id="how-use-this-book">
+<h2>How use this book<a class="headerlink" href="#how-use-this-book" title="Permalink to this headline">¶</a></h2>
+<p>The best way to use this book is to code alongside the examples and have a go at completing the exercises.</p>
 <p>There are 2 options to access the code.</p>
-<div class="section" id="option-a-clone-the-git-repository">
-<h3>Option A: Clone the git repository<a class="headerlink" href="#option-a-clone-the-git-repository" title="Permalink to this headline">¶</a></h3>
-<p>If you have some coding experience, this is the recommended option. You will need to have Python 3 installed on your system. From the terminal, run the following commands.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone http://ddanieltan.github.io/introduction_to_datascience_sg/
-
-conda create -n myenv
-conda activate myenv
-conda install --file requirements.txt
-</pre></div>
-</div>
-<p>This will clone this project’s code into a local folder and install the project’s dependencies.
-Following which, you can interact the code by starting a local jupyter notebook or jupyterlab instance.</p>
-</div>
-<div class="section" id="option-b-binder-link">
-<h3>Option B: Binder link<a class="headerlink" href="#option-b-binder-link" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="option-a-binder-link">
+<h3>Option A: Binder link<a class="headerlink" href="#option-a-binder-link" title="Permalink to this headline">¶</a></h3>
 <p>On every notebook, you’ll notice a binder link like so.
 <a class="reference external" href="https://mybinder.org/v2/gh/ddanieltan/introduction_to_datascience_sg/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <p>Clicking on the link will open a new tab in your browser that after a short startup time, give you access to a cloud-hosted instance of jupyterlab.
-From there, you can access and run the code directly from your browser.
-This is nice, fuss-free way of running the code without installing additional software in your computer making this option a useful way of conducting a workshop for a larger group of students. But the drawback is that you won’t be able to save a local copy of the code.</p>
-<div class="toctree-wrapper compound">
+From there, you can access and run the code directly from your browser.</p>
+<p>Option A is nice, fuss-free way of running the code without installing additional software in your computer. This option is particularly useful when conducting a 1-off workshop for a larger group of students as we can begin coding without spending time to setup.
+However, the drawback of this option is that you won’t be able to save a local copy of the code.</p>
 </div>
+<div class="section" id="option-b-local-coding-environment">
+<h3>Option B: Local coding environment<a class="headerlink" href="#option-b-local-coding-environment" title="Permalink to this headline">¶</a></h3>
+<p>If you have some coding experience or are willing to spend slightly more time to set up, Option B is for you. Option B has the added benefit of allowing you to save a local copy of your all notes and exercises.</p>
+<p>As a pre-requisite, you will need Python 3 and a few Python libraries installed on your system. A very convenient way to install these software is to use the Anaconda distribution. Visit <a class="reference external" href="https://docs.anaconda.com/anaconda/install/">the Ananconda Installation page</a> for instructions specific to your OS.</p>
+<p>Next, you can create a local copy of the entire code base on your computer with the following terminal command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone http://ddanieltan.github.io/introduction_to_datascience_sg/
+</pre></div>
+</div>
+<p>If you’ve installed the Anaconda distribution, you will have all the neccesary libraries for our lessons. Otherwise, if you chose not to use the Anaconda distribution, you can install the required libraries manually using the following command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Finally, you can start a <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> to begin using this book.</p>
+</div>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>The contents of this book are licensed for free consumption under the following license:<br />
+<a class="reference external" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)</a>.</p>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 </div>
@@ -238,7 +300,7 @@ This is nice, fuss-free way of running the code without installing additional so
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="../1_introduction/introduction.html" title="next page">Introduction</a>
+    <a class='right-next' id="next-link" href="../1_introduction/introduction.html" title="next page"><span class="section-number">1. </span>Introduction</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -258,6 +320,16 @@ This is nice, fuss-free way of running the code without installing additional so
     </div>
 
     <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-173954222-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

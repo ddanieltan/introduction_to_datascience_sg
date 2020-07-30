@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>1. Introduction &#8212; Introduction to Data Science SG</title>
+    <title>3.2. Pandas &#8212; Introduction to Data Science SG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,22 +37,21 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/1_introduction/introduction.html" />
+    <link rel="canonical" href="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/3_numpy_pandas/pandas.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.1. Jupyter Notebooks" href="jupyter_notebooks.html" />
-    <link rel="prev" title="About this book" href="../0_about/about_this_book.html" />
+    <link rel="prev" title="3.1. Numpy" href="numpy.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/1_introduction/introduction.html" />
+<meta property="og:url"         content="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/3_numpy_pandas/pandas.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Introduction" />
-<meta property="og:description" content="Introduction  What is Data Science? Data Science is a wide variety of techniques and practices modern companies use today to draw insights and predictions from " />
+<meta property="og:title"       content="Pandas" />
+<meta property="og:description" content="Pandas" />
 <meta property="og:image"       content="https://github.com/ddanieltan/introduction_to_datascience_sg/_static/logo.png" />
 
 <meta name="twitter:card" content="summary">
@@ -92,27 +91,32 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_introduction/introduction.html">
    1. Introduction
   </a>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="jupyter_notebooks.html">
-     1.1. Jupyter Notebooks
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../2_python_basics/python_basics.html">
    2. Python Basics
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../3_numpy_pandas/numpy_and_pandas.html">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="numpy_and_pandas.html">
    3. Numpy and Pandas
   </a>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numpy.html">
+     3.1. Numpy
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     3.2. Pandas
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -152,9 +156,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/chapters/1_introduction/introduction.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/chapters/3_numpy_pandas/pandas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -172,10 +176,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ddanieltan/introduction_to_datascience_sg/issues/new?title=Issue%20on%20page%20%2Fchapters/1_introduction/introduction.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ddanieltan/introduction_to_datascience_sg/issues/new?title=Issue%20on%20page%20%2Fchapters/3_numpy_pandas/pandas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ddanieltan/introduction_to_datascience_sg/edit/master/chapters/1_introduction/introduction.md"><button
+        <a class="edit-button" href="https://github.com/ddanieltan/introduction_to_datascience_sg/edit/master/chapters/3_numpy_pandas/pandas.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -206,19 +210,8 @@
         
               <div>
                 
-  <div class="section" id="introduction">
-<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p><strong>What is Data Science?</strong>
-Data Science is a wide variety of techniques and practices modern companies use today to draw insights and predictions from raw data.</p>
-<p><strong>What is Machine Learning?</strong>
-A focus of this book will be on Machine Learning techniques, which are the most common applications of data science in modern businesses. Traditional</p>
-<p><strong>Python Programming Language</strong>
-In this online textbook, we will be primarily using the Python progamming language.
-Python is argubly the <a class="reference external" href="http://pypl.github.io/PYPL.html">world’s most popular programming language</a> and the language most universities use today to teach programming to new students.
-Importantly, Python has a growing community of Data Science users, who have created many of the Python libraries that we will use in this book.</p>
-<p>That said, it is important to remember that Data Science is language agnostic. So while this book will use Python in its examples, the principals and techniques taught can be implemented in any other programming language.</p>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="pandas">
+<h1><span class="section-number">3.2. </span>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -234,7 +227,7 @@ Importantly, Python has a growing community of Data Science users, who have crea
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters/1_introduction"
+            path: "./chapters/3_numpy_pandas"
         },
         predefinedOutput: true
     }
@@ -249,8 +242,7 @@ Importantly, Python has a growing community of Data Science users, who have crea
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../0_about/about_this_book.html" title="previous page">About this book</a>
-    <a class='right-next' id="next-link" href="jupyter_notebooks.html" title="next page"><span class="section-number">1.1. </span>Jupyter Notebooks</a>
+    <a class='left-prev' id="prev-link" href="numpy.html" title="previous page"><span class="section-number">3.1. </span>Numpy</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

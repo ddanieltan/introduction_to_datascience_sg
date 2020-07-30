@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Variables &#8212; Introduction to Data Science SG</title>
+    <title>2.1. Variables &#8212; Introduction to Data Science SG</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,15 +37,25 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/2_python_basics/variables.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Control Flow" href="control_flow.html" />
-    <link rel="prev" title="Python Basics" href="python_basics.html" />
+    <link rel="next" title="2.2. Integers and Floats" href="int_and_float.html" />
+    <link rel="prev" title="2. Python Basics" href="python_basics.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/2_python_basics/variables.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Variables" />
+<meta property="og:description" content="Variables  Assignment  Variables are symbolic names that store pieces of information.  Using ‘=’, we assign values to variables  # Let's assign the value 9 to t" />
+<meta property="og:image"       content="https://github.com/ddanieltan/introduction_to_datascience_sg/_static/logo.png" />
+
+<meta name="twitter:card" content="summary">
 
 
   </head>
@@ -74,28 +84,55 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="current nav sidenav_l1">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../0_about/about_this_book.html">
+   About this book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_introduction/introduction.html">
-   Introduction
+   1. Introduction
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="reference internal" href="python_basics.html">
-   Python Basics
+   2. Python Basics
   </a>
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Variables
+     2.1. Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="int_and_float.html">
+     2.2. Integers and Floats
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="control_flow.html">
-     Control Flow
+     2.3. Control Flow
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises.html">
+     2.4. Exercises
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="solutions.html">
+     2.5. Solutions
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_numpy_pandas/numpy_and_pandas.html">
+   3. Numpy and Pandas
+  </a>
  </li>
 </ul>
 
@@ -146,6 +183,24 @@
 </div>
         <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ddanieltan/introduction_to_datascience_sg"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ddanieltan/introduction_to_datascience_sg/issues/new?title=Issue%20on%20page%20%2Fchapters/2_python_basics/variables.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ddanieltan/introduction_to_datascience_sg/edit/master/chapters/2_python_basics/variables.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -165,12 +220,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#assignment">
-   Assignment
+   2.1.1. Assignment
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reserved-keywords">
-   Reserved Keywords
+  <a class="reference internal nav-link" href="#variable-names">
+   2.1.2. Variable names
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-we-store-in-variables">
+   2.1.3. What can we store in variables?
   </a>
  </li>
 </ul>
@@ -185,9 +245,9 @@
                 
   <p><a class="reference external" href="https://mybinder.org/v2/gh/ddanieltan/introduction_to_datascience_sg/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <div class="section" id="variables">
-<h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.1. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="assignment">
-<h2>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1.1. </span>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">¶</a></h2>
 <p>Variables are symbolic names that store pieces of information.</p>
 <p>Using ‘=’, we assign values to variables</p>
 <div class="cell docutils container">
@@ -196,6 +256,15 @@
 <span class="n">x</span><span class="o">=</span><span class="mi">9</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember, in Python ‘=’ denotes assignment, not equality.</p>
+<p>We are not asking if x equals to 9.
+Instead, we are assigning the value of 9 to the variable x.</p>
 </div>
 </div>
 <p>Now anytime we call out this variable, we can retrieve our stored value.</p>
@@ -211,7 +280,7 @@
 </div>
 </div>
 </div>
-<p>Following which, we can now express more complex ideas with our variable.</p>
+<p>Having a variable with a stored value is convenient, as we can now interact with our variable in many ways.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
@@ -228,9 +297,23 @@
 </div>
 </div>
 </div>
+<p>Python also allows for multiple assignment. Here, we assign multiple values to multiple variables in a single line of code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="section" id="reserved-keywords">
-<h2>Reserved Keywords<a class="headerlink" href="#reserved-keywords" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>1 2 3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variable-names">
+<h2><span class="section-number">2.1.2. </span>Variable names<a class="headerlink" href="#variable-names" title="Permalink to this headline">¶</a></h2>
 <p>You may have noticed that while Python allows for a large variety of variable names…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -242,24 +325,6 @@
 </div>
 </div>
 <p>… some variable names cannot be used.</p>
-<div class="cell tag_raises-exception docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable Names that do not work</span>
-<span class="mi">22</span><span class="n">_jump_street</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># variable names that start with numbers</span>
-<span class="nb">print</span> <span class="o">=</span> <span class="mi">11</span>            <span class="c1"># variable names that match reserved key words</span>
-<span class="n">quick</span> <span class="n">brown</span> <span class="n">fox</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># variable names containing non-alpha numeric characters or underscores</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-5-1772b0cf3f92&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
-<span class="g g-Whitespace">    </span><span class="mi">22</span><span class="n">_jump_street</span> <span class="o">=</span> <span class="mi">10</span>   <span class="c1"># variable names that start with numbers</span>
-      <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid token
-</pre></div>
-</div>
-</div>
-</div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
@@ -267,45 +332,36 @@
 <p>Variable names are also case sensitive. Meaning that <code class="docutils literal notranslate"><span class="pre">kiasu</span></code>, <code class="docutils literal notranslate"><span class="pre">KIASU</span></code> and <code class="docutils literal notranslate"><span class="pre">kiaSU</span></code> would be treated as 3 separate variables</p>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fixing random state for reproducibility</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">19680801</span><span class="p">)</span>
-
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="n">ii</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
-<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)))</span>
-
-
-<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
-<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="o">.</span><span class="mi">5</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
-                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variable Names that do not work</span>
+<span class="mi">38</span><span class="n">_oxley_road</span> <span class="o">=</span> <span class="mi">10</span>    <span class="c1"># variable names that start with numbers</span>
+<span class="nb">print</span> <span class="o">=</span> <span class="mi">11</span>            <span class="c1"># variable names that match reserved key words</span>
+<span class="n">quick</span> <span class="n">brown</span> <span class="n">fox</span> <span class="o">=</span> <span class="mi">12</span>  <span class="c1"># variable names containing non-alpha numeric characters or underscores</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/variables_14_0.png" src="../../_images/variables_14_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-6-366c97e94cb2&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<span class="g g-Whitespace">    </span><span class="mi">38</span><span class="n">_oxley_road</span> <span class="o">=</span> <span class="mi">10</span>    <span class="c1"># variable names that start with numbers</span>
+      <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid token
+</pre></div>
 </div>
 </div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://executablebooks.github.io/cli/start/overview.html">the Jupyter Book documentation</a></p>
+</div>
+</div>
+<div class="section" id="what-can-we-store-in-variables">
+<h2><span class="section-number">2.1.3. </span>What can we store in variables?<a class="headerlink" href="#what-can-we-store-in-variables" title="Permalink to this headline">¶</a></h2>
+<p>Well, pretty much anything!
+In most cases, we store 1 of the following primitive data types:</p>
+<ul class="simple">
+<li><p>integers</p></li>
+<li><p>floats</p></li>
+<li><p>strings</p></li>
+<li><p>boolean</p></li>
+<li><p>none</p></li>
+</ul>
 </div>
 </div>
 
@@ -337,8 +393,8 @@ with your book. For more information about this, see <a class="reference externa
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="python_basics.html" title="previous page">Python Basics</a>
-    <a class='right-next' id="next-link" href="control_flow.html" title="next page">Control Flow</a>
+    <a class='left-prev' id="prev-link" href="python_basics.html" title="previous page"><span class="section-number">2. </span>Python Basics</a>
+    <a class='right-next' id="next-link" href="int_and_float.html" title="next page"><span class="section-number">2.2. </span>Integers and Floats</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -358,6 +414,16 @@ with your book. For more information about this, see <a class="reference externa
     </div>
 
     <script src="../../_static/js/index.js"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-173954222-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>
