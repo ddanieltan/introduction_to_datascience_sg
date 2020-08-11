@@ -1,5 +1,5 @@
 # About this book
-**Introduction to Data Science SG** is a free, online textbook that covers introductory topics under Data Science and Machine Learning. What makes this book unique is our usage of uniquely Singaporean datasets.
+**Introduction to Data Science SG** is a free, online textbook that covers introductory topics under Data Science and Machine Learning. What makes this book special is our usage of uniquely Singaporean datasets. 
 
 In this book, you'll learn:
 
