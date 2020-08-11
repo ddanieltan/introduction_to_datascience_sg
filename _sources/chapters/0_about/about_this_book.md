@@ -1,5 +1,5 @@
 # About this book
-**Introduction to Data Science SG** is a free, online textbook that covers introductory topics under Data Science and Machine Learning. What makes this book unique is our usage of uniquely Singaporean datasets.
+**Introduction to Data Science SG** is a free, online textbook that covers introductory topics under Data Science and Machine Learning. What makes this book special is our usage of uniquely Singaporean datasets. 
 
 In this book, you'll learn:
 
@@ -35,7 +35,7 @@ If you've installed the Anaconda distribution, you will have all the neccesary l
 ```
 pip install -r requirements.txt
 ```
-Finally, you can start a `jupyter lab` or `jupyter notebook` to begin using this book.
+Finally, you can start a `jupyter lab` or `jupyter notebook` session to begin using this book.
 
 ## License
 The contents of this book are licensed for free consumption under the following license:  

@@ -52,10 +52,10 @@
 <meta property="og:url"         content="https://github.com/ddanieltan/introduction_to_datascience_sg/chapters/2_python_basics/int_and_float.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Integers and Floats" />
-<meta property="og:description" content="Integers and Floats  One of the most useful ways to use Python is as a powerful and expressive calculator.  Integers  Integers are any whole numbers (positive a" />
+<meta property="og:description" content="Integers and Floats  Integers  Integers are any whole numbers (positive and negative) without a fractional part.  a=1 b=1000 c=-32 print(a,b,c)  1 1000 -32   Fl" />
 <meta property="og:image"       content="https://github.com/ddanieltan/introduction_to_datascience_sg/_static/logo.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -84,14 +84,7 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../0_about/about_this_book.html">
-   About this book
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+  <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_introduction/introduction.html">
    1. Introduction
@@ -214,7 +207,7 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -243,6 +236,11 @@
    2.2.5. Casting
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-calculations">
+   2.2.6. Python Calculations
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -256,7 +254,6 @@
   <p><a class="reference external" href="https://mybinder.org/v2/gh/ddanieltan/introduction_to_datascience_sg/master?urlpath=lab"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <div class="section" id="integers-and-floats">
 <h1><span class="section-number">2.2. </span>Integers and Floats<a class="headerlink" href="#integers-and-floats" title="Permalink to this headline">¶</a></h1>
-<p>One of the most useful ways to use Python is as a <strong>powerful</strong> and <strong>expressive</strong> calculator.</p>
 <div class="section" id="integers">
 <h2><span class="section-number">2.2.1. </span>Integers<a class="headerlink" href="#integers" title="Permalink to this headline">¶</a></h2>
 <p>Integers are any whole numbers (positive and negative) without a fractional part.</p>
@@ -322,6 +319,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">17</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>    <span class="c1"># classic division</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">17</span> <span class="o">//</span> <span class="mi">3</span><span class="p">)</span>   <span class="c1"># floor division discards the fractional part</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">17</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span>    <span class="c1"># the % operator returns the remainder of the division</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>      <span class="c1"># exponents</span>
 </pre></div>
 </div>
 </div>
@@ -329,6 +327,7 @@
 <div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>5.666666666666667
 5
 2
+256
 </pre></div>
 </div>
 </div>
@@ -370,7 +369,7 @@ Type returns the data type of any variable we provide as an input.</p>
 <p>When used as a function, we can cast data from 1 type to another.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">80</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1"># x is an integer</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -383,7 +382,7 @@ Type returns the data type of any variable we provide as an input.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># casting our integer to a float</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># casting our integer(x) to a float(y)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
@@ -428,6 +427,38 @@ Type returns the data type of any variable we provide as an input.</p>
 </pre></div>
 </div>
 <div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>float
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="python-calculations">
+<h2><span class="section-number">2.2.6. </span>Python Calculations<a class="headerlink" href="#python-calculations" title="Permalink to this headline">¶</a></h2>
+<p>One reason why Python is a very useful language is it’s ability to be a <strong>powerful</strong> and <strong>expressive</strong> calculator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python easily evaluates complicated mathematical expressions</span>
+<span class="mi">2</span><span class="o">**</span><span class="p">(</span><span class="mi">32</span><span class="o">%</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">4</span><span class="o">//</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="mi">47</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>51
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If we want to continue our calculations from where we left off</span>
+<span class="c1"># the latest output is always conveniently saved in the &#39;_&#39; variable</span>
+<span class="c1"># (much like a calculator)</span>
+<span class="n">_</span> <span class="o">*</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>5100
 </pre></div>
 </div>
 </div>
